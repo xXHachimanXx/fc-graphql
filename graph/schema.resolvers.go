@@ -24,15 +24,15 @@ func (r *mutationResolver) CreateChapter(ctx context.Context, input model.NewCha
 }
 
 func (r *queryResolver) Categories(ctx context.Context) ([]*model.Category, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Resolver.Categories, nil // it could be a db query (repository, maybe)
 }
 
 func (r *queryResolver) Courses(ctx context.Context) ([]*model.Course, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Resolver.Courses, nil // it could be a db query (repository, maybe)
 }
 
 func (r *queryResolver) Chapters(ctx context.Context) ([]*model.Chapter, error) {
-	panic(fmt.Errorf("not implemented"))
+	return r.Resolver.Chapters, nil // it could be a db query (repository, maybe)
 }
 
 // Mutation returns generated.MutationResolver implementation.
